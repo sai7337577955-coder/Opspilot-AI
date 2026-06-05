@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>OpsPilot AI</title>
+<title>OpsPilot AI - AI Powered Operations Copilot</title>
 
 <style>
 *{
@@ -13,205 +13,265 @@ box-sizing:border-box;
 font-family:'Segoe UI',sans-serif;
 }
 
+html{
+scroll-behavior:smooth;
+}
+
 body{
-background:#071122;
-color:#fff;
+background:#050b18;
+color:white;
 line-height:1.6;
 }
 
 .container{
 width:90%;
-max-width:1200px;
+max-width:1300px;
 margin:auto;
 }
 
 header{
-padding:25px 0;
-border-bottom:1px solid rgba(255,255,255,0.1);
-background:#071122;
 position:sticky;
 top:0;
+z-index:1000;
+background:rgba(5,11,24,0.95);
+backdrop-filter:blur(10px);
+border-bottom:1px solid rgba(255,255,255,0.08);
+}
+
+.nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:18px 0;
 }
 
 .logo{
-font-size:32px;
-font-weight:700;
+display:flex;
+align-items:center;
+gap:12px;
+}
+
+.logo img{
+height:50px;
+width:50px;
+border-radius:50%;
+}
+
+.logo h2{
 color:#4f8cff;
-}
-
-.hero{
-padding:100px 0;
-text-align:center;
-}
-
-.hero h1{
-font-size:64px;
-margin-bottom:20px;
-}
-
-.hero p{
-font-size:24px;
-max-width:900px;
-margin:auto;
-color:#c7d3e3;
-margin-bottom:40px;
 }
 
 .btn{
 display:inline-block;
-padding:15px 30px;
+padding:14px 28px;
 background:#4f8cff;
-color:#fff;
+color:white;
 text-decoration:none;
 border-radius:10px;
-font-weight:bold;
+font-weight:600;
 transition:0.3s;
 }
 
 .btn:hover{
 background:#2f6df7;
+transform:translateY(-2px);
+}
+
+.hero{
+padding:70px 0;
+}
+
+.hero-banner{
+width:100%;
+border-radius:20px;
+box-shadow:0 0 40px rgba(79,140,255,0.25);
+}
+
+.section{
+padding:90px 0;
+}
+
+.section-title{
+font-size:42px;
+text-align:center;
+margin-bottom:20px;
+}
+
+.section-subtitle{
+text-align:center;
+color:#b7c5d8;
+max-width:800px;
+margin:auto;
+margin-bottom:50px;
 }
 
 .stats{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
 gap:25px;
-margin-top:70px;
+margin-top:60px;
 }
 
-.card{
-background:#111d36;
+.stat-card{
+background:#0f1b33;
 padding:30px;
-border-radius:15px;
+border-radius:18px;
 text-align:center;
 }
 
-.card h2{
-color:#4f8cff;
-font-size:40px;
-margin-bottom:10px;
-}
-
-.section{
-padding:80px 0;
-}
-
-.section-title{
+.stat-card h3{
 font-size:42px;
-text-align:center;
-margin-bottom:50px;
+color:#4f8cff;
+margin-bottom:10px;
 }
 
 .grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(350px,1fr));
+gap:30px;
+}
+
+.card{
+background:#0f1b33;
+border-radius:20px;
+overflow:hidden;
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-5px);
+}
+
+.card img{
+width:100%;
+display:block;
+}
+
+.card-content{
+padding:20px;
+}
+
+.card-content h3{
+margin-bottom:10px;
+color:#4f8cff;
+}
+
+.features{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
 gap:25px;
 }
 
 .feature{
-background:#111d36;
+background:#0f1b33;
 padding:25px;
 border-radius:15px;
 }
 
 .feature h3{
-margin-bottom:10px;
 color:#4f8cff;
-}
-
-.screenshot{
-background:#111d36;
-padding:20px;
-border-radius:15px;
-text-align:center;
-}
-
-.screenshot img{
-width:100%;
-border-radius:10px;
+margin-bottom:10px;
 }
 
 .workflow{
-background:#0d172d;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
 }
 
 .step{
-background:#111d36;
+background:#0f1b33;
 padding:25px;
 border-radius:15px;
 }
 
+.step h3{
+color:#4f8cff;
+margin-bottom:10px;
+}
+
+.tech-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+gap:20px;
+}
+
 .tech{
-background:#111d36;
-padding:20px;
-border-radius:10px;
+background:#0f1b33;
+padding:18px;
+border-radius:12px;
 text-align:center;
 font-weight:600;
 }
 
-footer{
-padding:50px 0;
+.cta{
 text-align:center;
-border-top:1px solid rgba(255,255,255,0.1);
+background:#0f1b33;
+padding:60px 30px;
+border-radius:20px;
 }
 
-.small{
-color:#b6c2d3;
+footer{
+padding:40px 0;
+border-top:1px solid rgba(255,255,255,0.08);
+text-align:center;
+color:#aeb9c8;
 }
 
 @media(max-width:768px){
-
-.hero h1{
-font-size:42px;
-}
-
-.hero p{
-font-size:18px;
-}
 
 .section-title{
 font-size:32px;
 }
 
+.logo h2{
+font-size:22px;
+}
+
 }
 </style>
-
 </head>
+
 <body>
 
 <header>
-<div class="container">
-<div class="logo">OpsPilot AI</div>
+<div class="container nav">
+
+<div class="logo">
+<img src="images/opspilot-logo.png" alt="OpsPilot AI">
+<h2>OpsPilot AI</h2>
+</div>
+
+<a href="https://github.com/sai7337577955-coder/Opspilot-AI"
+target="_blank"
+class="btn">
+GitHub
+</a>
+
 </div>
 </header>
 
 <section class="hero">
 <div class="container">
 
-<h1>AI-Powered Operations Copilot</h1>
-
-<p>
-Reduce downtime, accelerate incident resolution, and automate support workflows using Gemini-powered operational intelligence.
-</p>
-
-<a href="https://github.com/sai7337577955-coder/Opspilot-AI" target="_blank" class="btn">
-View Project
-</a>
+<img src="images/hero-banner.png"
+class="hero-banner"
+alt="OpsPilot AI">
 
 <div class="stats">
 
-<div class="card">
-<h2>24/7</h2>
+<div class="stat-card">
+<h3>24/7</h3>
 <p>AI Incident Monitoring</p>
 </div>
 
-<div class="card">
-<h2>70%</h2>
+<div class="stat-card">
+<h3>70%</h3>
 <p>Faster Root Cause Analysis</p>
 </div>
 
-<div class="card">
-<h2>50%</h2>
+<div class="stat-card">
+<h3>50%</h3>
 <p>Reduced Manual Effort</p>
 </div>
 
@@ -221,11 +281,17 @@ View Project
 </section>
 
 <section class="section">
+
 <div class="container">
 
-<h2 class="section-title">Key Features</h2>
+<h2 class="section-title">Platform Overview</h2>
 
-<div class="grid">
+<p class="section-subtitle">
+OpsPilot AI helps IT Operations, DevOps and SRE teams detect incidents,
+analyze alerts, identify root causes and automate operational workflows.
+</p>
+
+<div class="features">
 
 <div class="feature">
 <h3>AI Alert Analysis</h3>
@@ -234,87 +300,97 @@ View Project
 
 <div class="feature">
 <h3>Root Cause Detection</h3>
-<p>Identifies probable causes using AI-driven investigation workflows.</p>
+<p>Identifies probable causes with AI-driven investigation.</p>
 </div>
 
 <div class="feature">
-<h3>Runbook Generation</h3>
-<p>Creates operational procedures and remediation guidance.</p>
-</div>
-
-<div class="feature">
-<h3>Shift Handover Reports</h3>
-<p>Generates concise support summaries for operational teams.</p>
-</div>
-
-<div class="feature">
-<h3>Knowledge Base Search</h3>
-<p>Instantly retrieves historical incidents and resolutions.</p>
+<h3>Automation Workflows</h3>
+<p>Accelerates response with intelligent recommendations.</p>
 </div>
 
 <div class="feature">
 <h3>Operational Analytics</h3>
-<p>Provides visibility into incidents, uptime, and performance trends.</p>
+<p>Track reliability, uptime and incident performance metrics.</p>
 </div>
 
 </div>
 
 </div>
+
 </section>
 
 <section class="section">
+
 <div class="container">
 
-<h2 class="section-title">Platform Screenshots</h2>
+<h2 class="section-title">Product Screenshots</h2>
 
 <div class="grid">
 
-<div class="screenshot">
-<img src="https://via.placeholder.com/800x450.png?text=Dashboard+Overview">
-<h3>Dashboard Overview</h3>
+<div class="card">
+<img src="images/operations-overview.png">
+<div class="card-content">
+<h3>Operations Overview</h3>
+<p>Centralized monitoring dashboard for incidents, services and infrastructure.</p>
+</div>
 </div>
 
-<div class="screenshot">
-<img src="https://via.placeholder.com/800x450.png?text=Alert+Analysis">
+<div class="card">
+<img src="images/analytics-dashboard.png">
+<div class="card-content">
+<h3>Analytics Dashboard</h3>
+<p>Track MTTR, incident volume, uptime and operational health.</p>
+</div>
+</div>
+
+<div class="card">
+<img src="images/alert-analysis.png">
+<div class="card-content">
 <h3>Alert Analysis</h3>
+<p>AI-powered incident investigation and anomaly detection.</p>
+</div>
 </div>
 
-<div class="screenshot">
-<img src="https://via.placeholder.com/800x450.png?text=Root+Cause+Analysis">
+<div class="card">
+<img src="images/root-cause-analysis.png">
+<div class="card-content">
 <h3>Root Cause Analysis</h3>
+<p>Identify dependencies, affected services and remediation steps.</p>
+</div>
 </div>
 
 </div>
 
 </div>
+
 </section>
 
-<section class="section workflow">
+<section class="section">
 
 <div class="container">
 
 <h2 class="section-title">How It Works</h2>
 
-<div class="grid">
+<div class="workflow">
 
 <div class="step">
-<h3>1. Alert Collection</h3>
-<p>Monitoring tools send alerts to OpsPilot AI.</p>
+<h3>1. Detect</h3>
+<p>Collect alerts from monitoring and observability platforms.</p>
 </div>
 
 <div class="step">
-<h3>2. AI Investigation</h3>
-<p>Gemini analyzes logs, incidents and operational context.</p>
+<h3>2. Analyze</h3>
+<p>AI investigates logs, metrics and operational context.</p>
 </div>
 
 <div class="step">
-<h3>3. Root Cause Detection</h3>
-<p>Probable causes and recommendations are generated.</p>
+<h3>3. Diagnose</h3>
+<p>Identify probable root causes and affected dependencies.</p>
 </div>
 
 <div class="step">
-<h3>4. Faster Resolution</h3>
-<p>Support teams resolve incidents with actionable insights.</p>
+<h3>4. Resolve</h3>
+<p>Provide recommendations and automate remediation workflows.</p>
 </div>
 
 </div>
@@ -329,14 +405,14 @@ View Project
 
 <h2 class="section-title">Built With</h2>
 
-<div class="grid">
+<div class="tech-grid">
 
-<div class="tech">Gemini API</div>
+<div class="tech">Gemini AI</div>
 <div class="tech">Google Cloud</div>
 <div class="tech">GitHub</div>
 <div class="tech">Vercel</div>
-<div class="tech">HTML</div>
-<div class="tech">CSS</div>
+<div class="tech">HTML5</div>
+<div class="tech">CSS3</div>
 <div class="tech">AI Agents</div>
 <div class="tech">DevOps Automation</div>
 
@@ -350,16 +426,20 @@ View Project
 
 <div class="container">
 
-<h2 class="section-title">Demo</h2>
+<div class="cta">
 
-<div style="text-align:center;">
-<p style="margin-bottom:20px;color:#c7d3e3;">
-Watch OpsPilot AI analyze alerts, identify root causes and automate operational workflows.
+<h2 style="margin-bottom:20px;">Ready for Smarter Operations?</h2>
+
+<p style="margin-bottom:30px;color:#c2d1e2;">
+Reduce downtime, improve reliability and accelerate incident resolution with OpsPilot AI.
 </p>
 
-<a class="btn" href="#">
-Demo Video Coming Soon
+<a href="https://github.com/sai7337577955-coder/Opspilot-AI"
+target="_blank"
+class="btn">
+View Project
 </a>
+
 </div>
 
 </div>
@@ -368,21 +448,8 @@ Demo Video Coming Soon
 
 <footer>
 
-<div class="container">
-
-<h2>OpsPilot AI</h2>
-
-<p class="small">
-AI-native operations platform for IT Operations, DevOps and SRE teams.
-</p>
-
-<br>
-
-<p class="small">
-Built with Gemini AI • Google Cloud • Automation
-</p>
-
-</div>
+<p>© 2026 OpsPilot AI</p>
+<p>AI-Powered Operations Copilot for IT Operations, DevOps and SRE Teams</p>
 
 </footer>
 
