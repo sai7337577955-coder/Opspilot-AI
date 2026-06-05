@@ -1,52 +1,289 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>OpsPilot AI</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            max-width: 900px;
-            margin: auto;
-            padding: 40px;
-            line-height: 1.6;
-        }
-        h1 {
-            color: #2563eb;
-        }
-        .btn {
-            background: #2563eb;
-            color: white;
-            padding: 12px 20px;
-            text-decoration: none;
-            border-radius: 5px;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>OpsPilot AI</title>
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Segoe UI, sans-serif;
+}
+
+body{
+background:#0b1020;
+color:white;
+line-height:1.6;
+}
+
+.container{
+width:90%;
+max-width:1200px;
+margin:auto;
+}
+
+header{
+padding:25px 0;
+border-bottom:1px solid rgba(255,255,255,0.1);
+}
+
+.logo{
+font-size:32px;
+font-weight:bold;
+color:#4f8cff;
+}
+
+.hero{
+padding:100px 0;
+text-align:center;
+}
+
+.hero h1{
+font-size:60px;
+margin-bottom:20px;
+}
+
+.hero p{
+font-size:22px;
+color:#cfd8e3;
+max-width:800px;
+margin:auto;
+margin-bottom:35px;
+}
+
+.btn{
+display:inline-block;
+padding:15px 30px;
+background:#4f8cff;
+color:white;
+text-decoration:none;
+border-radius:10px;
+font-weight:bold;
+}
+
+.btn:hover{
+background:#3775f6;
+}
+
+.stats{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
+margin-top:60px;
+}
+
+.card{
+background:#141c33;
+padding:30px;
+border-radius:15px;
+}
+
+.card h2{
+color:#4f8cff;
+margin-bottom:10px;
+}
+
+.features{
+padding:80px 0;
+}
+
+.section-title{
+text-align:center;
+font-size:40px;
+margin-bottom:50px;
+}
+
+.feature-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
+
+.feature{
+background:#141c33;
+padding:25px;
+border-radius:15px;
+}
+
+.feature h3{
+margin-bottom:10px;
+color:#4f8cff;
+}
+
+.workflow{
+padding:80px 0;
+background:#111827;
+}
+
+.steps{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
+
+.step{
+background:#141c33;
+padding:25px;
+border-radius:15px;
+}
+
+footer{
+padding:50px 0;
+text-align:center;
+border-top:1px solid rgba(255,255,255,0.1);
+}
+
+.small{
+color:#b0b8c5;
+}
+</style>
 </head>
+
 <body>
 
-<h1>OpsPilot AI</h1>
+<header>
+<div class="container">
+<div class="logo">OpsPilot AI</div>
+</div>
+</header>
 
-<h2>AI-Powered Operations Copilot</h2>
+<section class="hero">
+<div class="container">
 
-<p>
-OpsPilot AI helps IT Operations, DevOps, and SRE teams analyze alerts,
-investigate incidents, generate root-cause analysis, and automate support workflows.
-</p>
-
-<h3>Key Features</h3>
-
-<ul>
-<li>AI Alert Analysis</li>
-<li>Incident Investigation</li>
-<li>Root Cause Detection</li>
-<li>Runbook Generation</li>
-<li>Shift Handover Reports</li>
-<li>Operational Analytics Dashboard</li>
-</ul>
+<h1>AI-Powered Operations Copilot</h1>
 
 <p>
-<a href="#" class="btn">Request Demo</a>
+Reduce downtime, accelerate incident resolution,
+and automate support workflows with Gemini-powered
+operational intelligence.
 </p>
+
+<a href="https://github.com/sai7337577955-coder/Opspilot-AI"
+class="btn" target="_blank">
+View Project
+</a>
+
+<div class="stats">
+
+<div class="card">
+<h2>24/7</h2>
+<p>AI Incident Monitoring</p>
+</div>
+
+<div class="card">
+<h2>70%</h2>
+<p>Faster Root Cause Analysis</p>
+</div>
+
+<div class="card">
+<h2>50%</h2>
+<p>Reduced Manual Effort</p>
+</div>
+
+</div>
+
+</div>
+</section>
+
+<section class="features">
+<div class="container">
+
+<h2 class="section-title">Key Features</h2>
+
+<div class="feature-grid">
+
+<div class="feature">
+<h3>AI Alert Analysis</h3>
+<p>Automatically analyze monitoring alerts and identify critical incidents.</p>
+</div>
+
+<div class="feature">
+<h3>Incident Investigation</h3>
+<p>Understand incidents quickly with AI-generated operational insights.</p>
+</div>
+
+<div class="feature">
+<h3>Root Cause Detection</h3>
+<p>Identify probable root causes using intelligent correlation.</p>
+</div>
+
+<div class="feature">
+<h3>Runbook Generation</h3>
+<p>Create operational procedures automatically from incidents.</p>
+</div>
+
+<div class="feature">
+<h3>Shift Handover Reports</h3>
+<p>Generate comprehensive shift summaries in seconds.</p>
+</div>
+
+<div class="feature">
+<h3>Operational Dashboard</h3>
+<p>Monitor performance, incidents, and team productivity.</p>
+</div>
+
+</div>
+
+</div>
+</section>
+
+<section class="workflow">
+
+<div class="container">
+
+<h2 class="section-title">How It Works</h2>
+
+<div class="steps">
+
+<div class="step">
+<h3>1. Alert Received</h3>
+<p>Monitoring tools send alerts to OpsPilot AI.</p>
+</div>
+
+<div class="step">
+<h3>2. AI Investigation</h3>
+<p>Gemini analyzes logs, metrics, and incident context.</p>
+</div>
+
+<div class="step">
+<h3>3. Root Cause Found</h3>
+<p>The platform generates probable causes and recommendations.</p>
+</div>
+
+<div class="step">
+<h3>4. Faster Resolution</h3>
+<p>Engineers resolve incidents with actionable guidance.</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<footer>
+
+<div class="container">
+
+<h2>OpsPilot AI</h2>
+
+<p class="small">
+AI-native operations platform for IT Operations,
+DevOps, and SRE teams.
+</p>
+
+<br>
+
+<p class="small">
+Built with Gemini AI • Google Cloud • DevOps Automation
+</p>
+
+</div>
+
+</footer>
 
 </body>
 </html>
