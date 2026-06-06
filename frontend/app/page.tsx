@@ -15,7 +15,7 @@ export default function Dashboard() {
   const [connected, setConnected] = useState(false);
 
   useEffect(() => {
-    const ws = new WebSocket("wss://ideal-memory-qvqrjxqwgr7wf6g6-8000.app.github.dev/ws");
+    const ws = new WebSocket("wss://opspilot-ai-production-2c74.up.railway.app/ws");
     ws.onopen = () => setConnected(true);
     ws.onclose = () => setConnected(false);
     ws.onmessage = (e) => {
@@ -31,7 +31,7 @@ export default function Dashboard() {
   const runRCA = async (incident: any) => {
     setRcaLoading(true);
     setRca("");
-    const res = await fetch("https://ideal-memory-qvqrjxqwgr7wf6g6-8000.app.github.dev/api/analyze", {
+    const res = await fetch("https://opspilot-ai-production-2c74.up.railway.app/api/analyze", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(incident),
